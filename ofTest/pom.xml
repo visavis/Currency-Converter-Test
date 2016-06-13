@@ -53,6 +53,25 @@
 			<version>20160212</version>
 		</dependency>
 
+		<!-- Cucumber -->
+
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-core</artifactId>
+			<version>1.2.4</version>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>1.2.4</version>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-testng</artifactId>
+			<version>1.2.4</version>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<testSourceDirectory>src/test/java</testSourceDirectory>

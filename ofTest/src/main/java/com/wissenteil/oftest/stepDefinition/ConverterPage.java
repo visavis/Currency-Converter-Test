@@ -1,4 +1,4 @@
-package com.wissenteil.oftest;
+package com.wissenteil.oftest.stepDefinition;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
