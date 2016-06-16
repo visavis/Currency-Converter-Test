@@ -1,6 +1,5 @@
 package com.wissenteil.oftest.test;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -19,13 +18,16 @@ plugin = { "pretty","json:target/stepdefinition.json" })
 
 public class RunCucumberTests extends AbstractTestNGCucumberTests {
 	
+	
+	
 	@BeforeClass
 	public void setup() {
-		CucumberDriverConfiguration.setDriver();
+		CucumberTestConfiguration.setDriver();
+		
 	}
 	
 	@AfterClass
 	public void tearDown() {
-		CucumberDriverConfiguration.destroyAllDrivers();
+		CucumberTestConfiguration.destroyAllDrivers();
 	}
 }

@@ -5,8 +5,9 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class CucumberDriverConfiguration {
+public class CucumberTestConfiguration {
 	private static WebDriver driver;
+	private static final String BASE_URL = "https://wiesenttal.herokuapp.com";
 	
 	public static void setDriver() {
 		driver = new FirefoxDriver();
@@ -19,5 +20,9 @@ public class CucumberDriverConfiguration {
 	
 	public static WebDriver getDriver() {
 		return driver;
+	}
+	
+	public static String getBaseUrl() {
+		return BASE_URL;
 	}
 }

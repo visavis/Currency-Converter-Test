@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -101,24 +101,10 @@
                     <div class="method-list-content failed suite-TestNG">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-TestNG" title="com.wissenteil.oftest.test.RunCucumberTests" hash-for-method="feature(Page test)">feature(Page test)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-TestNG" title="com.wissenteil.oftest.test.RunCucumberTests" hash-for-method="feature(Test Signup process)">feature(Test Signup process)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-TestNG -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-TestNG" class="hide-methods passed suite-TestNG"> (hide)</a> <!-- hide-methods passed suite-TestNG -->
-                      <a href="#" panel-name="suite-TestNG" class="show-methods passed suite-TestNG"> (show)</a> <!-- show-methods passed suite-TestNG -->
-                    </span>
-                    <div class="method-list-content passed suite-TestNG">
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-TestNG" title="com.wissenteil.oftest.test.RunCucumberTests" hash-for-method="feature(Test currencies)">feature(Test currencies)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-TestNG -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -138,11 +124,11 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="feature(Page test)">
-                  </a> <!-- feature(Page test) -->
+                  <a name="feature(Test Signup process)">
+                  </a> <!-- feature(Test Signup process) -->
                   <span class="method-name">feature</span>
-                  <span class="parameters">(Page test)</span>
-                  <div class="stack-trace">cucumber.runtime.CucumberException: org.junit.ComparisonFailure: expected:&lt;[0.88861]&gt; but was:&lt;[100]&gt;
+                  <span class="parameters">(Test Signup process)</span>
+                  <div class="stack-trace">cucumber.runtime.CucumberException: java.lang.AssertionError: expected:&lt;https://wiesenttal.herokuapp.com/signup&gt; but was:&lt;https://wiesenttal.herokuapp.com/&gt;
 	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -169,11 +155,11 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-Caused by: org.junit.ComparisonFailure: expected:&lt;[0.88861]&gt; but was:&lt;[100]&gt;
-	at org.junit.Assert.assertEquals(Assert.java:125)
-	at org.junit.Assert.assertEquals(Assert.java:147)
-	at com.wissenteil.oftest.stepDefinition.TestSteps.theExchangeRateWillbeSameAsOnFriday(TestSteps.java:50)
-	at ✽.Then the exchange rate will be same as on Friday(testFail.feature:9)
+Caused by: java.lang.AssertionError: expected:&lt;https://wiesenttal.herokuapp.com/signup&gt; but was:&lt;https://wiesenttal.herokuapp.com/&gt;
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:101)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:108)
+	at com.wissenteil.oftest.stepDefinition.TestSteps.isSignupPageLoaded(TestSteps.java:35)
+	at ✽.Then I will see the sign up page(TestSignupProcess.feature:7)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -182,24 +168,6 @@ Caused by: org.junit.ComparisonFailure: expected:&lt;[0.88861]&gt; but was:&lt;[
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-TestNG-class-failed -->
-          <div class="suite-TestNG-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.wissenteil.oftest.test.RunCucumberTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="feature(Test currencies)">
-                  </a> <!-- feature(Test currencies) -->
-                  <span class="method-name">feature</span>
-                  <span class="parameters">(Test currencies)</span>
-                  <em>
-(Runs Cucumber Feature)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-TestNG-class-passed -->
         </div> <!-- panel TestNG -->
         <div panel-name="test-xml-TestNG" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -260,20 +228,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'feature')
 data.setCell(0, 2, 'com.wissenteil.oftest.test.RunCucumberTests')
-data.setCell(0, 3, 9458);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'feature')
-data.setCell(1, 2, 'com.wissenteil.oftest.test.RunCucumberTests')
-data.setCell(1, 3, 4337);
+data.setCell(0, 3, 1920);
 window.suiteTableData['TestNG']= { tableData: data, tableDiv: 'times-div-TestNG'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 seconds</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-TestNG">
               </div> <!-- times-div-TestNG -->
             </div> <!-- times-div -->
@@ -306,25 +270,21 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">setup</span>
-                <span class="method-start">207 ms</span>
+                <span class="method-start">223 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">feature(Test currencies)</span>
-                <span class="method-start">2497 ms</span>
-              </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">feature(Page test)</span>
-                <span class="method-start">11956 ms</span>
+                <span class="method-name">feature(Test Signup process)</span>
+                <span class="method-start">2290 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">16295 ms</span>
+                <span class="method-start">4212 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">16303 ms</span>
+                <span class="method-start">4222 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

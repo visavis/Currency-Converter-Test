@@ -8,7 +8,7 @@
           <include name="setup"/>
           <include name="setUpClass"/>
           <include name="tearDown"/>
-          <include name="feature" invocation-numbers="1"/>
+          <include name="feature" invocation-numbers="0"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- com.wissenteil.oftest.test.RunCucumberTests -->
