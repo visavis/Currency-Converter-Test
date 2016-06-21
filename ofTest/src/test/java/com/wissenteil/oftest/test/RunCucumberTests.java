@@ -11,19 +11,14 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 //@RunWith(Cucumber.class)
 @CucumberOptions(features = {"src/test/features/"}, 
 glue = {"com.wissenteil.oftest.stepDefinition"},
-plugin = { "pretty","json:target/stepdefinition.json" })
+plugin = { "pretty", "json:target/cucumber.json" })
 
-
-
-
-public class RunCucumberTests extends AbstractTestNGCucumberTests {
-	
+public class RunCucumberTests extends AbstractTestNGCucumberTests {	
 	
 	
 	@BeforeClass
 	public void setup() {
-		CucumberTestConfiguration.setDriver();
-		
+		CucumberTestConfiguration.setDriver();		
 	}
 	
 	@AfterClass

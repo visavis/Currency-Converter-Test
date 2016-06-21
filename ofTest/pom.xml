@@ -72,6 +72,12 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- <dependency> -->
+		<!-- <groupId>net.masterthought</groupId> -->
+		<!-- <artifactId>cucumber-reporting</artifactId> -->
+		<!-- <version>2.5.0</version> -->
+		<!-- </dependency> -->
+
 	</dependencies>
 	<build>
 		<testSourceDirectory>src/test/java</testSourceDirectory>
@@ -108,6 +114,27 @@
 							<include>**/*Test.java</include>
 							<include>**/*TestCase.java</include>
 						</includes>
+					</configuration>
+				</plugin>
+				<plugin>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>3.0.0</version>
+					<configuration>
+						<skip>true</skip>
+						<filesets>
+							<fileset>
+								<directory>target</directory>
+								<includes>
+									<include>**/*.tmp</include>
+									<include>**/*.log</include>
+								</includes>
+								<excludes>
+									<exclude>**/important.log</exclude>
+									<exclude>**/another-important.log</exclude>
+								</excludes>
+								<followSymlinks>false</followSymlinks>
+							</fileset>
+						</filesets>
 					</configuration>
 				</plugin>
 			</plugins>

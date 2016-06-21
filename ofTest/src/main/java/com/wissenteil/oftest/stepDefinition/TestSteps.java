@@ -83,6 +83,11 @@ public class TestSteps {
 		assertTrue(signupPage.usernameInput.isDisplayed());
 	}
 	
+	@Then("^I will see the alert saying: (.*)$")
+	public void isAlertTextPresent(String text) {
+		assertEquals(text, signupPage.alertWarnings.get(0).getText());
+	}
+	
 	@Then("^I will see Welcome to the Sample App! alert$")
 	public void isWelcomeAlertPresent() {
 		assertTrue(signupPage.welcomeAlertSuccess.isDisplayed());
