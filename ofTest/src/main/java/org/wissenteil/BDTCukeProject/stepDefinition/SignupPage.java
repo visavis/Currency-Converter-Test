@@ -1,4 +1,4 @@
-package com.wissenteil.oftest.stepDefinition;
+package org.wissenteil.BDTCukeProject.stepDefinition;
 
 import java.util.List;
 

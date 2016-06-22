@@ -3,7 +3,7 @@
 <suite name="TestNG" verbose="8">
 	<test name="RunCukes">
 		<classes>
-			<class name="com.wissenteil.oftest.test.RunCucumberTests">
+			<class name="org.wissenteil.BDTCukeProject.test.RunCucumberTests">
 			</class>
 		</classes>
 	</test>

@@ -1,4 +1,4 @@
-package com.wissenteil.oftest.helpers;
+package org.wissenteil.BDTCukeProject.helpers;
 
 import java.util.Calendar;
 
