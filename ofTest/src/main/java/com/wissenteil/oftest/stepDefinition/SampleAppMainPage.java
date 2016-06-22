@@ -51,10 +51,21 @@ public class SampleAppMainPage {
 	}
 
 	// Locators
-
+	
+	//Header
+	
+	
+	@FindBy(xpath = "//a[@href = '/login']")
+	WebElement loginLink;
+	
+	//Body
+	
 	@FindBy(id = "quote_currency_input")
 	WebElement quoteCurrencySelect;
 
 	@FindBy(linkText = "Sign up now!")
 	WebElement signupButton;
+	
+	//Footer
+
 }

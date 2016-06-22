@@ -11,6 +11,7 @@ public class TestSteps {
 	
 	private SampleAppMainPage mainPage = new SampleAppMainPage();
 	private SignupPage signupPage = new SignupPage("/signup");
+	private LoginPage loginPage = new LoginPage("/login");
 	
 	String youGet;
 	String youPay;
@@ -23,6 +24,12 @@ public class TestSteps {
 	@When("^I click Sign up now! button$")
 	public void clickSignupButton() {
 		mainPage.signupButton.click();
+	}
+	
+	@When("^I click login link$")
+	public void clickLoginLink() {
+		mainPage.loginLink.click();
+		loginPage.open();
 	}
 	
 	@When("^I fill the username input with (.*)$")
