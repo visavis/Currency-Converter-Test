@@ -1,4 +1,4 @@
-package org.wissenteil.BDTCukeProject.stepDefinition;
+package org.wissenteil.bdt.selenium.cukeproject.stepDefinition;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,7 +13,7 @@ public class LoginPage extends SampleAppMainPage {
 	WebElement sessionEmailInput;
 	
 	@FindBy(id = "session_password")
-	WebElement sessionUsernameInput;	
+	WebElement sessionPasswordInput;	
 	
 	@FindBy(xpath = "//input[@type = 'submit']")
 	WebElement loginButton;

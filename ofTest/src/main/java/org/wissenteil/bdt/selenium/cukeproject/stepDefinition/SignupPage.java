@@ -1,4 +1,4 @@
-package org.wissenteil.BDTCukeProject.stepDefinition;
+package org.wissenteil.bdt.selenium.cukeproject.stepDefinition;
 
 import java.util.List;
 
@@ -16,16 +16,16 @@ public class SignupPage extends SampleAppMainPage {
 	// Locators
 
 	@FindBy(how = How.ID, using = "user_name")
-	WebElement usernameInput;
+	WebElement newUsernameInput;
 
 	@FindBy(id = "user_email")
-	WebElement emailInput;
+	WebElement newEmailInput;
 
 	@FindBy(id = "user_password")
-	WebElement passwordInput;
+	WebElement newPasswordInput;
 
 	@FindBy(id = "user_password_confirmation")
-	WebElement confirmationInput;
+	WebElement newConfirmationInput;
 
 	@FindBy(xpath = "//input[@value = 'Create account']")
 	WebElement newAccountSubmit;

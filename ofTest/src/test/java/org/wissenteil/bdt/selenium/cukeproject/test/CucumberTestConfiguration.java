@@ -1,4 +1,4 @@
-package com.wissenteil.oftest.test;
+package org.wissenteil.bdt.selenium.cukeproject.test;
 
 import java.util.concurrent.TimeUnit;
 

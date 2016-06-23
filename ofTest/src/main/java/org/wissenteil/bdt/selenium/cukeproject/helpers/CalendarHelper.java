@@ -1,4 +1,4 @@
-package org.wissenteil.BDTCukeProject.helpers;
+package org.wissenteil.bdt.selenium.cukeproject.helpers;
 
 import java.util.Calendar;
 
