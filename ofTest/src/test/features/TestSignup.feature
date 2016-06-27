@@ -14,7 +14,7 @@ Feature: Test Signup process failure
     And I fill the password input with <password>  on signup page
     And I fill the password confiration input with <password_confirmation>  on signup page
     And I click submit button
-    Then I will see the alert saying: <alert>  on signup page
+    Then I will see the alert saying: <alert>, on signup page
 
     Examples: 
       | expectation                | name | email                      | password | password_confirmation | alert               |

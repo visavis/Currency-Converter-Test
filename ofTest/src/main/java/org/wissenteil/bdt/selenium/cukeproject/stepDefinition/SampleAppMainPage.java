@@ -12,9 +12,11 @@ import org.wissenteil.bdt.selenium.cukeproject.test.CucumberTestConfiguration;
 public class SampleAppMainPage {
 	protected WebDriver driver;
 	protected StringBuilder pageUrl;
+	protected JavascriptExecutor js;
 
 	public SampleAppMainPage(String partialUrl) {
 		this.driver = CucumberTestConfiguration.getDriver();
+		this.js = CucumberTestConfiguration.getJs();
 		this.pageUrl = new StringBuilder(CucumberTestConfiguration.getBaseUrl())
 				.append(partialUrl);
 	}
@@ -25,7 +27,10 @@ public class SampleAppMainPage {
 
 	public void open() {
 		driver.get(pageUrl.toString());
-		// Initialize Elements
+		PageFactory.initElements(driver, this);
+	}
+	
+	public void init() {
 		PageFactory.initElements(driver, this);
 	}
 
@@ -38,16 +43,15 @@ public class SampleAppMainPage {
 	}
 
 	/**
-	 * Disable driver input fields validations for HTML5 forms
-	 * Workaround thanks to @http://novalidate.com/
+	 * Disable driver input fields validations for HTML5 forms Workaround thanks
+	 * to @http://novalidate.com/
 	 */
 
 	public void noValidate() {
-		((JavascriptExecutor) driver)
-				.executeScript("for(var f=document.forms,i=f.length;i--;)f[i].setAttribute('novalidate',i)");
+		js.executeScript("for(var f=document.forms,i=f.length;i--;)f[i].setAttribute('novalidate',i)");
 	}
 
-	public void waitForPageToLoad(long timeOutInSeconds) {
+	public void waitForLoad(long timeOutInSeconds) {
 		WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
 		wait.until(ExpectedConditions.urlToBe(getPageUrl()));
 	}
@@ -61,7 +65,6 @@ public class SampleAppMainPage {
 		return getCurrentUrl().equals(pageUrl.toString());
 	}
 
-	// Locators
 
 	// Header
 
@@ -70,8 +73,6 @@ public class SampleAppMainPage {
 
 	// Body
 
-	@FindBy(id = "quote_currency_input")
-	WebElement quoteCurrencySelect;
 
 	@FindBy(linkText = "Sign up now!")
 	WebElement signupButton;

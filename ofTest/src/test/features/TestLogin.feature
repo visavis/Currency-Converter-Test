@@ -10,5 +10,5 @@ Feature: Test login
     And I click sign in button
 
     Examples: 
-      | expectation                | email                      | password       |
-      | alert for lack of username | dummy_user1@dummy-mail.com | wrong_password | 
+      | expectation                                    | email                      | password       |
+      | alert for wrong email and password combination | dummy_user1@dummy-mail.com | wrong_password |

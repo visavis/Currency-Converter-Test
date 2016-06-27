@@ -18,11 +18,12 @@ public class RunCucumberTests extends AbstractTestNGCucumberTests {
 	
 	@BeforeClass
 	public void setup() {
-		CucumberTestConfiguration.setDriver();		
+		CucumberTestConfiguration.setDriver();
 	}
-	
+
 	@AfterClass
 	public void tearDown() {
 		CucumberTestConfiguration.destroyAllDrivers();
 	}
+
 }

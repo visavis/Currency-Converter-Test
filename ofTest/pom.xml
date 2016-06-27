@@ -117,13 +117,13 @@
 						<filesets>
 							<fileset>
 								<directory>target</directory>
+								<directory>test-output</directory>
 								<includes>
 									<include>**/*.tmp</include>
 									<include>**/*.log</include>
 								</includes>
 								<excludes>
 									<exclude>**/important.log</exclude>
-									<exclude>**/another-important.log</exclude>
 								</excludes>
 								<followSymlinks>false</followSymlinks>
 							</fileset>

@@ -6,7 +6,7 @@
       <class name="org.wissenteil.bdt.selenium.cukeproject.test.RunCucumberTests">
         <methods>
           <include name="setUpClass"/>
-          <include name="feature" invocation-numbers="1"/>
+          <include name="feature" invocation-numbers="0 1"/>
           <include name="tearDown"/>
           <include name="tearDownClass"/>
           <include name="setup"/>

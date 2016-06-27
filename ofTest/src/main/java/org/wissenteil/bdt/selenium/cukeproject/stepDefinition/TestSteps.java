@@ -63,7 +63,7 @@ public class TestSteps {
 
 	@Then("^I will be redirected to signup page$")
 	public void redirectedToSignupPage() {
-		signupPage.waitForPageToLoad(10);
+		signupPage.waitForLoad(10);
 		signupPage.noValidate();
 		assertEquals(signupPage.getPageUrl(), signupPage.getCurrentUrl());
 	}
@@ -89,7 +89,7 @@ public class TestSteps {
 		assertTrue(signupPage.newUsernameInput.isDisplayed());
 	}
 
-	@Then("^I will see the alert saying: (.*) on signup page$")
+	@Then("^I will see the alert saying: (.*), on signup page$")
 	public void isAlertTextPresent(String text) {
 		assertEquals(text, signupPage.alertWarnings.get(0).getText());
 	}
@@ -103,7 +103,7 @@ public class TestSteps {
 //	 * LoginPage steps *
 	@Then("^I will be redirected to login page$")
 	public void redirectedToLoginPage() {
-		loginPage.waitForPageToLoad(10);
+		loginPage.waitForLoad(10);
 		loginPage.noValidate();
 		assertEquals(loginPage.getPageUrl(), loginPage.getCurrentUrl());
 	}
