@@ -17,8 +17,8 @@ Feature: Test Signup process failure
     Then I will see the alert saying: <alert>, on signup page
 
     Examples: 
-      | expectation                | name | email                      | password | password_confirmation | alert               |
-      | alert for lack of username |      | dummy_user1@dummy-mail.com | password | password              | Name can't be blank |
-#      | alert for lack of email          | dummy_user |                            | password | password              | Email can't be blank                            |
-#      | alert for password too short     | dummy_user | dummy_user@dummy-mail.com  | pass     | pass                  | Password is too short (minimum is 6 characters) |
-#      | alert for password inconsistency | dummy_user | dummy_user@dummy-mail.com  | pass     | password              | Password confirmation doesn't match Password    |
+      | expectation                      | name       | email                     | password | password_confirmation | alert                                           |
+      | alert for lack of username       |            | dummy.user1@dummymail.com | password | password              | Name can't be blank                             |
+      | alert for lack of email          | dummy_user |                           | password | password              | Email can't be blank                            |
+      | alert for password too short     | dummy_user | dummy.user@dummymail.com  | pass     | pass                  | Password is too short (minimum is 6 characters) |
+      | alert for password inconsistency | dummy_user | dummy.user@dummymail.com  | password | other_password        | Password confirmation doesn't match Password    |

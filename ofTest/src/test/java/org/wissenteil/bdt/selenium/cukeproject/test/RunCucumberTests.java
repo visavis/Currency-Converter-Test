@@ -6,16 +6,10 @@ import org.testng.annotations.BeforeClass;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
+@CucumberOptions(features = { "src/test/features/" }, glue = { "org.wissenteil.bdt.selenium.cukeproject.stepDefinition" }, plugin = {
+		"pretty", "json:target/cucumber.json" })
+public class RunCucumberTests extends AbstractTestNGCucumberTests {
 
-
-//@RunWith(Cucumber.class)
-@CucumberOptions(features = {"src/test/features/"}, 
-glue = {"org.wissenteil.bdt.selenium.cukeproject.stepDefinition"},
-plugin = { "pretty", "json:target/cucumber.json" })
-
-public class RunCucumberTests extends AbstractTestNGCucumberTests {	
-	
-	
 	@BeforeClass
 	public void setup() {
 		CucumberTestConfiguration.setDriver();

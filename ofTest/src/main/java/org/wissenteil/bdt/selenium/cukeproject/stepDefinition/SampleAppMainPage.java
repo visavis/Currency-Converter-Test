@@ -9,6 +9,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.wissenteil.bdt.selenium.cukeproject.test.CucumberTestConfiguration;
 
+/**
+ * @author Andrzej Czechowski
+ * The MainPage class in this test setup serves three purposes:
+ * Store page objects that are common to all pages (header, footer etc.),
+ * Implement methods that are not specific to any Page, like waitForLoad(),
+ * Share references to WebDriver, Base Page URL and JS Executor with child classes
+ */
 public class SampleAppMainPage {
 	protected WebDriver driver;
 	protected StringBuilder pageUrl;
@@ -44,7 +51,7 @@ public class SampleAppMainPage {
 
 	/**
 	 * Disable driver input fields validations for HTML5 forms Workaround thanks
-	 * to @http://novalidate.com/
+	 * to {@link http://novalidate.com/} 
 	 */
 
 	public void noValidate() {

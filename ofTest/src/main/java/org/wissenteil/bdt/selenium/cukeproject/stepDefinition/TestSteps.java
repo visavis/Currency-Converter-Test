@@ -7,8 +7,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 /**
- * @author Andrzej Czechowski Step Definitions are grouped by Page, they refer
- *         to.
+ * @author Andrzej Czechowski Step Definitions are grouped by Page, they refer to.
  */
 public class TestSteps {
 
